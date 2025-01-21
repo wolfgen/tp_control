@@ -95,12 +95,9 @@ bool Table::open()
 
 //example of whereCondition:
 //"_ID > 40"
-bool Table::open(string whereCondition, bool noCase)
+bool Table::open(string whereCondition)
 {
-	string queryStr = "select * from " + _tableName + (whereCondition.empty() ? "" : " where " + whereCondition);
-
-	if (noCase)
-		queryStr = queryStr + string(" COLLATE NOCASE");
+	const string queryStr = "select * from " + _tableName + (whereCondition.empty() ? "" : " where " + whereCondition);
 
 	if (_recordset.query(queryStr))
 	{

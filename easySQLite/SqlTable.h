@@ -42,7 +42,7 @@ public:
 
 public:
 	bool open();
-	bool open(string whereCondition, bool noCase = false);
+	bool open(string whereCondition);
 	bool open(string whereCondition, string sortBy);
 	bool query(string queryStr);
 	int totalRecordCount();

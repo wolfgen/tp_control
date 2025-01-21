@@ -18,7 +18,7 @@ FieldSet::FieldSet(Field* definition)
 				break;
 
 			field._index = index;
-			
+
 			_vec.push_back(field);			
 			_map[field.getName()] = &field;
 
@@ -44,7 +44,6 @@ void FieldSet::copy(const std::vector<Field>& definition)
 	//make fields map from vector
 	for (int index = 0; index < (int)_vec.size(); index++)
 	{
-		_vec[index]._index = index;
 		Field& field = _vec[index];
 		_map[field.getName()] = &field;
 	}

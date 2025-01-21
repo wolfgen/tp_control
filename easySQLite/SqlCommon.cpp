@@ -161,7 +161,7 @@ string binToHex(const char* buffer, int size)
 
 #pragma warning(default : 4996)
 
-string generateSHA(const string& value)
+string generateSHA(string& value)
 {
 	CSHA1 sha;
 
