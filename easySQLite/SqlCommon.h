@@ -145,7 +145,7 @@ string quoteStr(string value);
 
 string binToHex(const char* buffer, int size);
 
-string generateSHA(string& value);
+string generateSHA(const string& value);
 
 string& trimleft(string& s);
 string& trimright(string& s);
